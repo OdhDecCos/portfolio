@@ -21,6 +21,11 @@ header {
         list-style: none;
         display: flex;
         align-items: center;
+        justify-content: space-between;
+    }
+
+    li {
+        margin: 2em;
     }
 
     .logo {

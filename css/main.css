@@ -20,6 +20,10 @@ header ul {
   list-style: none;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+header li {
+  margin: 2em;
 }
 header .logo {
   max-height: 148px;
