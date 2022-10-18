@@ -12,8 +12,8 @@ body {
 }
 
 header {
-  background-color: #2a3438;
-  color: white;
+  background-color: var(--main-bg);
+  color: var(--main-txt);
   display: flex;
 }
 header ul {
