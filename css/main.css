@@ -11,25 +11,34 @@ body {
   font-family: "Do Hyeon", sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--main-txt);
+}
+
 header {
   background-color: var(--main-bg);
   color: var(--main-txt);
   display: flex;
+  justify-content: space-between;
+  padding: 0 3em 0 3em;
 }
 header ul {
   list-style: none;
   display: flex;
+  width: 100%;
+  max-width: 800px;
   align-items: center;
   justify-content: space-between;
+  justify-self: right;
+  margin-right: 3em;
 }
 header li {
-  margin: 2em;
+  font-size: 2em;
 }
 header .logo {
   max-height: 148px;
 }
-
-a {
-  text-decoration: none;
-  color: var(--main-txt);
+header a:hover {
+  color: var(--main-accent);
 }/*# sourceMappingURL=main.css.map */
