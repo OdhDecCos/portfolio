@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
 :root {
-    --main-bg: #333366;
+    --header-bg: #333366;
     --main-txt: #ffffcc;
+    --main-bg: #181818;
     --main-accent: #00cc99;
+    --em-txt: #FFBA5E;
 }
 
 body {
     margin: 0;
     padding: 0;
+    background-color: var(--main-bg);
     font-family: 'Do Hyeon', sans-serif;
 }
 
@@ -18,19 +21,20 @@ a {
 }
 
 header {
-    background-color: var(--main-bg);
+    border-radius: 0 0 25px 25px;
+    background-color: var(--header-bg);
     color: var(--main-txt);
     display: flex;
     justify-content: space-between;
-    //max-height: 148px;
-    padding: 0 3em 0 3em;
+    max-height: 100px;
+    padding: 0   3em     0   3em;
     //      top right bottom left
 
     ul {
         list-style: none;
         display: flex;
         width: 100%;
-        max-width: 800px;
+        max-width: 500px;
         align-items: center;
         justify-content: space-between;
         justify-self: right;
@@ -38,15 +42,40 @@ header {
     }
 
     li {
-        font-size: 2em;
+        font-size: 1.5em;
     }
 
     .logo {
-        max-height: 148px;
+        max-height: 100px;
     }
 
     a:hover {
         color: var(--main-accent);
+    }
+}
+
+.home {
+    background-color: var(--main-bg);
+    height: calc(100vh - 165px);
+    padding: 2em;
+    display: flex;
+    align-items: center;
+
+    h1 {
+        color: var(--main-accent);
+        margin: 0;
+        font-size: 6em;
+        text-shadow: 5px 5px 10px rgb(255, 255, 255, 0.5);
+    }
+
+    h2 {
+        color: var(--main-txt);
+        margin: 0;
+        font-size: 3em;
+
+        em {
+            color: var(--em-txt);
+        }
     }
 }
 
