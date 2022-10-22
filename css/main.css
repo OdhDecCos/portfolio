@@ -36,6 +36,9 @@ h2 {
   margin: 0;
   color: var(--main-txt);
   font-size: 3em;
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--main-accent);
+          text-decoration-color: var(--main-accent);
 }
 h2 em {
   color: var(--em-txt);
@@ -71,6 +74,14 @@ section a:hover {
 section p {
   font-size: 1.25em;
 }
+section ul {
+  width: 20vw;
+  list-style: none;
+}
+section li {
+  font-size: 1.5em;
+  padding-bottom: 1em;
+}
 
 header {
   background-color: var(--header-bg);
@@ -98,10 +109,62 @@ header .logo {
   max-height: 100px;
 }
 
+.home h2 {
+  text-decoration: none;
+}
+
 .section-container {
   width: 50vw;
 }
 
-.skills-container {
-  width: 50vw;
+.prog-bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  overflow: visible;
+}
+
+.prog {
+  height: 3px;
+  background-color: var(--main-accent);
+}
+
+#python {
+  width: 90%;
+}
+
+#java {
+  width: 90%;
+}
+
+#solidworks {
+  width: 80%;
+}
+
+#web {
+  width: 75%;
+}
+
+#js {
+  width: 70%;
+}
+
+#c {
+  width: 65%;
+}
+
+#motion {
+  width: 60%;
+}
+
+#en {
+  width: 100%;
+}
+
+#fr {
+  width: 100%;
+}
+
+#es {
+  width: 70%;
 }/*# sourceMappingURL=main.css.map */
