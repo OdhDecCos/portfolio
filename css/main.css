@@ -5,13 +5,15 @@
   --main-bg: #181818;
   --main-accent: #00cc99;
   --em-txt: #FFBA5E;
+  --fullscreen: calc(100vh - 100px);
 }
 
 body {
+  height: 100%;
   margin: 0;
   padding: 0;
-  background-color: var(--main-bg);
   font-family: "Do Hyeon", sans-serif;
+  color: var(--main-txt);
 }
 
 a {
@@ -19,14 +21,65 @@ a {
   color: var(--main-txt);
 }
 
+a:hover {
+  color: var(--main-accent);
+}
+
+h1 {
+  margin: 0;
+  color: var(--main-accent);
+  font-size: 6em;
+  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+  margin: 0;
+  color: var(--main-txt);
+  font-size: 3em;
+}
+h2 em {
+  color: var(--em-txt);
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  text-align: justify;
+}
+
+.main {
+  height: var(--fullscreen);
+  overflow: auto;
+  -ms-scroll-snap-type: y mandatory;
+      scroll-snap-type: y mandatory;
+}
+
+section {
+  height: 100%;
+  background-color: var(--main-bg);
+  scroll-snap-align: start;
+  padding-left: 2em;
+  display: flex;
+  align-items: center;
+}
+section a {
+  color: var(--main-accent);
+}
+section a:hover {
+  text-decoration: underline;
+}
+section p {
+  font-size: 1.25em;
+}
+
 header {
-  border-radius: 0 0 25px 25px;
   background-color: var(--header-bg);
   color: var(--main-txt);
   display: flex;
   justify-content: space-between;
-  max-height: 100px;
-  padding: 0 3em 0 3em;
+  height: 100px;
+  padding: 0 3em;
+  margin: 0;
 }
 header ul {
   list-style: none;
@@ -44,28 +97,11 @@ header li {
 header .logo {
   max-height: 100px;
 }
-header a:hover {
-  color: var(--main-accent);
+
+.section-container {
+  width: 50vw;
 }
 
-.home {
-  background-color: var(--main-bg);
-  height: calc(100vh - 165px);
-  padding: 2em;
-  display: flex;
-  align-items: center;
-}
-.home h1 {
-  color: var(--main-accent);
-  margin: 0;
-  font-size: 6em;
-  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
-}
-.home h2 {
-  color: var(--main-txt);
-  margin: 0;
-  font-size: 3em;
-}
-.home h2 em {
-  color: var(--em-txt);
+.skills-container {
+  width: 50vw;
 }/*# sourceMappingURL=main.css.map */
