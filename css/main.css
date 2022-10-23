@@ -130,6 +130,7 @@ header .logo {
 
 .illus {
   width: 40vw;
+  max-width: 500px;
 }
 
 .section-container {
