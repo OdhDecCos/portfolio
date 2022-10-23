@@ -39,11 +39,22 @@ h2 {
     margin: 0;
     color: var(--main-txt);
     font-size: 3em;
-    text-decoration: underline;
-    text-decoration-color: var(--main-accent);
+    list
 
     em {
         color: var(--em-txt);
+    }
+
+    b {
+        color: var(--main-accent);
+    }
+
+    &::before {
+        content: "\2022";
+        color: var(--main-accent);
+        display: inline-block;
+        width: 0.5em;
+        margin-left: 0.25em;
     }
 }
 
@@ -120,9 +131,20 @@ header {
 }
 
 .home {
-    h2 {
-        text-decoration: none;
+    h2::before {
+        display: none;
     }
+}
+
+.illus-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50vw;
+}
+
+.illus {
+    width: 40vw;
 }
 
 .section-container {
