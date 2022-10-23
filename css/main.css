@@ -38,7 +38,7 @@ h2 {
   color: var(--main-txt);
   font-size: 3em;
 }
-h2 list em {
+h2 em {
   color: var(--em-txt);
 }
 h2 b {
@@ -48,7 +48,7 @@ h2::before {
   content: "•";
   color: var(--main-accent);
   display: inline-block;
-  width: 0.5em;
+  width: 0.75em;
   margin-left: 0.25em;
 }
 
@@ -69,7 +69,6 @@ section {
   height: 100%;
   background-color: var(--main-bg);
   scroll-snap-align: start;
-  padding-left: 2em;
   display: flex;
   align-items: center;
 }
@@ -81,6 +80,7 @@ section a:hover {
 }
 section p {
   font-size: 1.25em;
+  max-width: 40vw;
 }
 section ul {
   width: 20vw;
@@ -89,6 +89,14 @@ section ul {
 section li {
   font-size: 1.5em;
   padding-bottom: 1em;
+}
+
+.left {
+  padding-left: 2em;
+}
+
+.right {
+  padding-right: 2em;
 }
 
 header {
@@ -127,10 +135,32 @@ header .logo {
   align-items: center;
   width: 50vw;
 }
+.illus-container .project-list {
+  overflow: hidden;
+  width: 40vw;
+  height: 30vw;
+  border: 4px solid var(--main-accent);
+  border-radius: 3em;
+  padding: 0;
+}
+.illus-container .project-list li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.illus-container .project-list img {
+  width: 100%;
+  height: 100%;
+}
+.illus-container .project-list p {
+  position: absolute;
+  bottom: 2em;
+  left: 1em;
+  color: white;
+}
 
 .illus {
   width: 40vw;
-  max-width: 500px;
 }
 
 .section-container {
@@ -159,6 +189,10 @@ header .logo {
 
 #solidworks {
   width: 80%;
+}
+
+#android {
+  width: 75%;
 }
 
 #web {

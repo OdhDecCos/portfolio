@@ -39,7 +39,6 @@ h2 {
     margin: 0;
     color: var(--main-txt);
     font-size: 3em;
-    list
 
     em {
         color: var(--em-txt);
@@ -53,7 +52,7 @@ h2 {
         content: "\2022";
         color: var(--main-accent);
         display: inline-block;
-        width: 0.5em;
+        width: 0.75em;
         margin-left: 0.25em;
     }
 }
@@ -74,7 +73,6 @@ section {
     height: 100%;
     background-color: var(--main-bg);
     scroll-snap-align: start;
-    padding-left: 2em;
     display: flex;
     align-items: center;
 
@@ -88,6 +86,7 @@ section {
 
     p {
         font-size: 1.25em;
+        max-width: 40vw;
     }
 
     ul {
@@ -99,6 +98,15 @@ section {
         font-size: 1.5em;
         padding-bottom: 1em;
     }
+    
+}
+
+.left {
+    padding-left: 2em;
+}
+
+.right {
+    padding-right: 2em;
 }
 
 header {
@@ -141,11 +149,37 @@ header {
     justify-content: center;
     align-items: center;
     width: 50vw;
+
+    .project-list {
+        overflow: hidden;
+        width: 40vw;
+        height: 30vw;
+        border: 4px solid var(--main-accent);
+        border-radius: 3em;
+        padding: 0;
+
+        li {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+
+        p {
+            position: absolute;
+            bottom: 2em;
+            left: 1em;
+            color: white;
+        }
+    }
 }
 
 .illus {
     width: 40vw;
-    max-width: 500px;
 }
 
 .section-container {
@@ -167,6 +201,7 @@ header {
 #python {width: 90%;}
 #java {width: 90%;}
 #solidworks {width: 80%;}
+#android {width: 75%;}
 #web {width: 75%;}
 #js {width: 70%;}
 #c {width: 65%;}
