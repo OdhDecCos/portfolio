@@ -60,7 +60,6 @@ h2 {
 p {
     padding: 0;
     margin: 0;
-    text-align: justify;
 }
 
 .main {
@@ -86,7 +85,8 @@ section {
 
     p {
         font-size: 1.25em;
-        max-width: 40vw;
+        max-width: 50vw;
+        text-align: justify;
     }
 
     ul {
@@ -145,6 +145,8 @@ header {
 }
 
 .illus-container {
+    padding: 0;
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -152,8 +154,8 @@ header {
 
     .project-list {
         overflow: hidden;
-        width: 40vw;
-        height: 30vw;
+        width: 35vw;
+        height: 35vw;
         border: 4px solid var(--main-accent);
         border-radius: 3em;
         padding: 0;
@@ -170,16 +172,21 @@ header {
         }
 
         p {
+            font-size: 2em;
+            text-align: left;
             position: absolute;
-            bottom: 2em;
+            bottom: 1em;
             left: 1em;
             color: white;
+            text-shadow: 5px 5px 10px rgb(0, 0, 0);
+            text-shadow: -5px -5px 10px rgb(0, 0, 0);
         }
     }
 }
 
 .illus {
     width: 40vw;
+    filter: drop-shadow(2px 2px 10px rgb(255, 255, 255, 0.5));
 }
 
 .section-container {
@@ -196,6 +203,30 @@ header {
 .prog {
     height: 3px;
     background-color: var(--main-accent);
+}
+
+.contact-ul {
+    padding: 1em;
+    position: absolute;
+    background-color: var(--main-bg);
+    border: 4px solid var(--em-txt);
+    border-radius: 3em;
+    right: 2em;
+    top: 2em;
+    text-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+}
+
+.contact-li {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+}
+
+i {
+    color: var(--main-accent);
+    padding-right: 1em;
 }
 
 #python {width: 90%;}
