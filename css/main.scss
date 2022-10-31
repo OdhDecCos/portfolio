@@ -1,7 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
 
-
-
 :root {
     --header-bg: #333366;
     --main-txt: #ffffcc;
@@ -242,3 +240,37 @@ i {
 #en {width: 100%;}
 #fr {width: 100%;}
 #es {width: 70%;}
+
+@media only screen and (max-width: 600px) {
+    .illus-container {
+        display: none;
+    }
+
+    .section-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section {
+        justify-content: center;
+
+        p {
+            max-width: 90%;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    }
+
+    .left {
+        padding-right: 2em;
+    }
+    
+    .right {
+        padding-left: 2em;
+    }
+}
