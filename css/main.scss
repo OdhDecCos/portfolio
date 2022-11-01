@@ -2,6 +2,7 @@
 
 :root {
     --header-bg: #333366;
+    --menu-bg: #292952;
     --main-txt: #ffffcc;
     --main-bg: #181818;
     --main-accent: #00cc99;
@@ -62,6 +63,7 @@ p {
 
 .main {
     height: var(--fullscreen);
+    width: 100vw;
     overflow: auto;
     scroll-snap-type: y mandatory;
 }
@@ -90,13 +92,14 @@ section {
     ul {
         width: 20vw;
         list-style: none;
+        padding-right: 1em;
     }
 
     li {
         font-size: 1.5em;
         padding-bottom: 1em;
     }
-    
+
 }
 
 .left {
@@ -111,6 +114,7 @@ header {
     background-color: var(--header-bg);
     color: var(--main-txt);
     display: flex;
+    align-items: center;
     justify-content: space-between;
     height: 100px;
     padding: 0 3em;
@@ -134,6 +138,93 @@ header {
     .logo {
         max-height: 100px;
     }
+
+    .hamburger-icon {
+        display: none;
+        cursor: pointer;
+        padding: 20px 8px;
+        position: relative;
+        user-select: none;
+
+        .nav-icon {
+            background: var(--main-txt);
+            display: block;
+            height: 5px;
+            width: 45px;
+            position: relative;
+            transition: background .3s ease-out;
+        }
+
+        .nav-icon::before,
+        .nav-icon::after {
+            background: var(--main-txt);
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .3s ease-out;
+            width: 100%;
+        }
+
+        .nav-icon::before {
+            top: -12px;
+        }
+
+        .nav-icon::after {
+            top: 12px;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger:checked ~ .menu {
+        max-height: 300px;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon {
+        background: transparent;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 99px;
+        width: 30vw;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        background-color: var(--menu-bg);
+        box-shadow: 1px 3px 4px white;
+        border-radius: 0 0 1em 0;
+
+        ul {
+            margin: 1em;
+            display: block;
+            padding: 0;
+            width: fit-content;
+            list-style: circle;
+
+            li {
+                width: fit-content;
+                padding-top: 0.75em;
+                padding-bottom: 0.75em;
+            }
+        }
+    }
 }
 
 .home {
@@ -149,37 +240,6 @@ header {
     justify-content: center;
     align-items: center;
     width: 50vw;
-
-    .project-list {
-        overflow: hidden;
-        width: 35vw;
-        height: 35vw;
-        border: 4px solid var(--main-accent);
-        border-radius: 3em;
-        padding: 0;
-
-        li {
-            position: relative;
-            width: 100%;
-            height: 100%;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-        }
-
-        p {
-            font-size: 2em;
-            text-align: left;
-            position: absolute;
-            bottom: 1em;
-            left: 1em;
-            color: white;
-            text-shadow: 5px 5px 10px rgb(0, 0, 0);
-            text-shadow: -5px -5px 10px rgb(0, 0, 0);
-        }
-    }
 }
 
 .illus {
@@ -192,6 +252,11 @@ header {
     width: 50vw;
 }
 
+.skill-container {
+    display: flex;
+    align-items: center;
+}
+
 .prog-bar {
     height: 3px;
     width: 100%;
@@ -202,6 +267,37 @@ header {
 .prog {
     height: 3px;
     background-color: var(--main-accent);
+}
+
+.project-list {
+    overflow: hidden;
+    width: 35vw;
+    height: 35vw;
+    border: 4px solid var(--main-accent);
+    border-radius: 3em;
+    padding: 0;
+
+    li {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+    }
+
+    p {
+        font-size: 2em;
+        text-align: left;
+        position: absolute;
+        bottom: 1em;
+        left: 1em;
+        color: white;
+        text-shadow: 5px 5px 10px rgb(0, 0, 0);
+        text-shadow: -5px -5px 10px rgb(0, 0, 0);
+    }
 }
 
 .contact-ul {
@@ -228,49 +324,132 @@ i {
     padding-right: 1em;
 }
 
-#python {width: 90%;}
-#java {width: 90%;}
-#solidworks {width: 80%;}
-#android {width: 75%;}
-#web {width: 75%;}
-#js {width: 70%;}
-#c {width: 65%;}
-#motion {width: 60%;}
+#python {
+    width: 90%;
+}
 
-#en {width: 100%;}
-#fr {width: 100%;}
-#es {width: 70%;}
+#java {
+    width: 90%;
+}
 
-@media only screen and (max-width: 600px) {
-    .illus-container {
+#solidworks {
+    width: 80%;
+}
+
+#android {
+    width: 75%;
+}
+
+#web {
+    width: 75%;
+}
+
+#js {
+    width: 70%;
+}
+
+#c {
+    width: 65%;
+}
+
+#motion {
+    width: 60%;
+}
+
+#en {
+    width: 100%;
+}
+
+#fr {
+    width: 100%;
+}
+
+#es {
+    width: 70%;
+}
+
+@media only screen and (max-width: 800px) {
+    .desktop {
         display: none;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 0 1em;
+        position: relative;
+        z-index: 3;
+
+        .hamburger-icon {
+            display: block;
+        }
+
+        ul {
+            display: none;
+        }
     }
 
     .section-container {
         width: 100vw;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
     }
 
     section {
+        flex-direction: column;
         justify-content: center;
+        overflow: hidden;
 
         p {
-            max-width: 90%;
+            max-width: 80%;
         }
 
         h2 {
             text-align: center;
+        }
+
+        ul {
+            width: 40vw;
+        }
+    }
+
+    .home {
+        h2 {
+            text-align: left;
         }
     }
 
     .left {
         padding-right: 2em;
     }
-    
+
     .right {
         padding-left: 2em;
+    }
+
+    .illus-container {
+        width: 100%;
+    }
+
+    .illus {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .skill-container {
+        margin-right: 1em;
+    }
+
+    #projects {
+        flex-direction: column-reverse;
+    }
+
+    .project-list {
+        width: 80vw;
+        height: 80vw;
+    }
+
+    .contact-ul {
+        font-size: 0.75em;
     }
 }

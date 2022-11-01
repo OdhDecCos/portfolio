@@ -12,13 +12,23 @@
 
 <body>
     <header>
+        <input type="checkbox" id="hamburger" class="hamburger">
+        <label class="hamburger-icon" for="hamburger"><span class="nav-icon"></span></label>
         <img src="img/LogoOCPNGCercle.png" alt="Logo" class="logo">
         <ul>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#skills">My Skills</a></li>
-            <li><a href="#projects">My Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
+        <div class="menu">
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </header>
     <div class="main">
         <section class="home">
@@ -27,96 +37,100 @@
                 <h1>Odhran Costello</h1>
                 <h2>And i'm an <em>engineering student</em></h2>
             </div>
-            <div class="illus-container">
+            <div class="illus-container desktop">
                 <img src="img/LogoOCPNGCercle.png" alt="Logo" class="illus">
             </div>
         </section>
         <section class="about" id="about">
-            <div class="illus-container">
+            <div class="illus-container desktop">
                 <img src="img/LogoOCPNGCercle.png" alt="Logo" class="illus">
             </div>
             <div class="section-container right">
                 <h2><b>A</b>bout <b>M</b>e</h2>
-                <p>I'm an Irish student studying at <em><a href="esme.fr">ESME Sudria</a></em>,
+                <p>I'm an Irish student studying at <em><a href="https://www.esme.fr" target="_blank">ESME
+                            Sudria</a></em>,
                     an engineering school located in France. <br>
                     Hard worker, team player and problem solver are three qualities that define me. <br>
                     I'm passionate about self-improvement, which manifests itself through stoicism and physical
                     exercise. <br>
                     Recently having started my last year of engineering, I am currently looking for an internship near
                     Bordeaux, France. <br>
-                    Feel free to <em><a href="">contact me</a></em> for more information!
+                    Feel free to <em><a href="#contact">contact me</a></em> for more information!
                 </p>
             </div>
         </section>
         <section class="skills" id="skills">
             <div class="section-container left">
-                <h2><b>S</b>kills & <b>E</b>xperience</h2>
-                <p>
+                <h2><b>M</b>y <b>S</b>kills</h2>
+                <p class="desktop">
                     5 years of engineering school have taught me many different skills.
                     I chose to major in Mechatronics, hoping to enjoy a carreer in robotics,
                     specifically working on motion contol in the industrial field.
                     Along the way, I've gained experience with many tools and across many fields.
                 </p>
             </div>
-            <ul>
-                <li>Python<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="python"></div>
-                    </div>
-                </li>
-                <li>Java<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="java"></div>
-                    </div>
-                </li>
-                <li>Solidworks<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="solidworks"></div>
-                    </div>
-                </li>
-                <li>Android<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="android"></div>
-                    </div>
-                </li>
-                <li>HTML & CSS<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="web"></div>
-                    </div>
-                </li>
-                <li>Javascript<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="js"></div>
-                    </div>
-                </li>
-                <li>C<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="c"></div>
-                    </div>
-                </li>
-                <li>Motion Control<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="motion"></div>
-                    </div>
-                </li>
-            </ul>
-            <ul>
-                <li>English<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="en"></div>
-                    </div>
-                </li>
-                <li>French<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="fr"></div>
-                    </div>
-                </li>
-                <li>Spanish<br>
-                    <div class="prog-bar">
-                        <div class="prog" id="es"></div>
-                    </div>
-                </li>
-            </ul>
+            <div class="skill-container">
+                <ul>
+                    <li>Python<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="python"></div>
+                        </div>
+                    </li>
+                    <li>Java<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="java"></div>
+                        </div>
+                    </li>
+                    <li>Solidworks<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="solidworks"></div>
+                        </div>
+                    </li>
+                    <li>Android<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="android"></div>
+                        </div>
+                    </li>
+                    <li>HTML & CSS<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="web"></div>
+                        </div>
+                    </li>
+                    <li>Javascript<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="js"></div>
+                        </div>
+                    </li>
+                    <li>C<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="c"></div>
+                        </div>
+                    </li>
+                    <li>Motion Control<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="motion"></div>
+                        </div>
+                    </li>
+                </ul>
+                <ul>
+                    <li>English<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="en"></div>
+                        </div>
+                    </li>
+                    <li>French<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="fr"></div>
+                        </div>
+                    </li>
+                    <li>Spanish<br>
+                        <div class="prog-bar">
+                            <div class="prog" id="es"></div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
         </section>
         <section class="projects" id="projects">
             <div class="illus-container">
@@ -149,7 +163,7 @@
             </div>
             <div class="section-container right">
                 <h2><b>P</b>rojects</h2>
-                <p>
+                <p class="desktop">
                     Here are a few of the projects I've had the opportunity to work on. <br>
                     Some of them were requirements of my engineering course, while others were passion projects I
                     developped in my spare time. <br>
@@ -159,13 +173,13 @@
         <section class="contact" id="contact">
             <div class="section-container left">
                 <h2><b>C</b>ontact <b>M</b>e</h2>
-                <p>
+                <p class="desktop">
                     I'm open to work starting from April 3rd 2023.
                     Feel free to contact me for more information!
                 </p>
             </div>
             <div class="illus-container">
-                <img src="img/MapBlue.png" alt="Logo" class="illus">
+                <img src="img/MapBlue.png" alt="Map" class="illus">
                 <ul class="contact-ul">
                     <li class="contact-li"><i class="material-icons icon">mail</i>odhran.costello @esme.fr</li>
                     <li class="contact-li"><i class="material-icons icon">phone</i>0647155608</li>
