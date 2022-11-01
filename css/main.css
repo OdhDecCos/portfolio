@@ -264,15 +264,16 @@ header .menu ul li {
   height: 100%;
 }
 .project-list img {
+  margin: 0;
   width: 100%;
   height: 100%;
 }
 .project-list p {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: left;
   position: absolute;
-  bottom: 1em;
-  left: 1em;
+  bottom: 10%;
+  left: 10%;
   color: white;
   text-shadow: 5px 5px 10px rgb(0, 0, 0);
   text-shadow: -5px -5px 10px rgb(0, 0, 0);
@@ -405,8 +406,8 @@ i {
     flex-direction: column-reverse;
   }
   .project-list {
-    width: 80vw;
-    height: 80vw;
+    width: 70vw;
+    height: 70vw;
   }
   .contact-ul {
     font-size: 0.75em;
