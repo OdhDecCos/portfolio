@@ -180,20 +180,20 @@ header {
         display: none;
     }
 
-    .hamburger:checked ~ .menu {
+    .hamburger:checked~.menu {
         max-height: 300px;
     }
 
-    .hamburger:checked ~ .hamburger-icon .nav-icon {
+    .hamburger:checked~.hamburger-icon .nav-icon {
         background: transparent;
     }
 
-    .hamburger:checked ~ .hamburger-icon .nav-icon::after {
+    .hamburger:checked~.hamburger-icon .nav-icon::after {
         transform: rotate(45deg);
         top: 0;
     }
 
-    .hamburger:checked ~ .hamburger-icon .nav-icon::before {
+    .hamburger:checked~.hamburger-icon .nav-icon::before {
         transform: rotate(-45deg);
         top: 0;
     }
@@ -274,7 +274,7 @@ header {
     overflow: hidden;
     width: 35vw;
     height: 35vw;
-    border: 4px solid var(--main-accent);
+    border: 4px solid var(--em-txt);
     border-radius: 3em;
     padding: 0;
 
@@ -297,8 +297,12 @@ header {
         bottom: 10%;
         left: 10%;
         color: white;
-        text-shadow: 5px 5px 10px rgb(0, 0, 0);
-        text-shadow: -5px -5px 10px rgb(0, 0, 0);
+        text-shadow: 5px 5px 10px rgb(0, 0, 0),
+            -5px -5px 10px rgb(0, 0, 0);
+    }
+
+    .slide {
+        animation: fade 0.5s, fadeout 0.5s 3.6s;
     }
 }
 
@@ -453,5 +457,25 @@ i {
 
     .contact-ul {
         font-size: 0.75em;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.0;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 1.0;
+    }
+
+    to {
+        opacity: 0.0;
     }
 }

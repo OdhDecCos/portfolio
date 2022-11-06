@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 :root {
     --header-bg: #333366;
     --menu-bg: #292952;
@@ -6,4 +8,257 @@
     --main-accent: #00cc99;
     --em-txt: #FFBA5E;
     --fullscreen: calc(100vh - 100px);
+}
+
+header {
+    background-color: var(--header-bg);
+    color: var(--main-txt);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100px;
+    padding: 0 3em;
+    margin: 0;
+
+    ul {
+        margin: 2em;
+        list-style: none;
+        display: flex;
+        width: 100%;
+        max-width: 500px;
+        align-items: center;
+        justify-content: space-between;
+        justify-self: right;
+        margin-right: 3em;
+    }
+
+    li {
+        font-size: 1.5em;
+    }
+
+    .logo {
+        max-height: 100px;
+    }
+
+    .hamburger-icon {
+        display: none;
+        cursor: pointer;
+        padding: 20px 8px;
+        position: relative;
+        user-select: none;
+
+        .nav-icon {
+            background: var(--main-txt);
+            display: block;
+            height: 5px;
+            width: 45px;
+            position: relative;
+            transition: background .3s ease-out;
+        }
+
+        .nav-icon::before,
+        .nav-icon::after {
+            background: var(--main-txt);
+            content: '';
+            display: block;
+            height: 100%;
+            position: absolute;
+            transition: all .3s ease-out;
+            width: 100%;
+        }
+
+        .nav-icon::before {
+            top: -12px;
+        }
+
+        .nav-icon::after {
+            top: 12px;
+        }
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .hamburger:checked ~ .menu {
+        max-height: 300px;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon {
+        background: transparent;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon::after {
+        transform: rotate(45deg);
+        top: 0;
+    }
+
+    .hamburger:checked ~ .hamburger-icon .nav-icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+    }
+
+    .menu {
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        left: 0;
+        top: 99px;
+        width: 35vw;
+        max-height: 0;
+        transition: max-height 0.3s ease-out;
+        background-color: var(--menu-bg);
+        box-shadow: 1px 3px 4px white;
+        border-radius: 0 0 1em 0;
+
+        ul {
+            margin: 1em;
+            display: block;
+            padding: 0;
+            width: fit-content;
+            list-style: circle;
+
+            li {
+                width: fit-content;
+                padding-top: 0.75em;
+                padding-bottom: 0.75em;
+            }
+        }
+    }
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Do Hyeon', sans-serif;
+    color: var(--main-txt);
+    background-color: var(--main-bg);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-txt);
+}
+
+a:hover {
+    color: var(--main-accent);
+}
+
+h1 {
+    margin: 0;
+    height: 100px;
+    color: var(--main-txt);
+    font-size: 5em;
+    text-shadow: 5px 5px 10px rgb(255, 255, 255, 0.5);
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: var(--main-accent);
+}
+
+.content {
+    height: max-content;
+    display: flex;
+    align-items: center;
+}
+
+.description {
+    width: 50vw;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    dl {
+        display: grid;
+        grid-template-columns: auto auto;
+        align-items: center;
+        gap: 1.25em;
+        font-size: 1.5em;
+        text-shadow: 2px 2px 10px rgb(255, 255, 255, 0.5);
+        padding: 1em;
+        border: 2px solid var(--em-txt);
+        border-radius: 1em;
+    
+        dt {
+            color: var(--main-accent);
+        }
+
+        dd {
+            max-width: 25vw;
+            text-align: center;
+        }
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    }
+}
+
+.illus {
+    width: 50vw;
+    height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .left {
+        border-bottom: 4px solid var(--main-accent);
+        border-left: 4px solid var(--main-accent);
+        transform: translateX(25%) rotate(45deg);
+    }
+
+    .right {
+        border-right: 4px solid var(--main-accent);
+        border-top: 4px solid var(--main-accent);
+        transform: translateX(-25%) rotate(45deg);
+    }
+
+    .slide {
+        height: 80%;
+        aspect-ratio: 1/1;
+        border-radius: 1em;
+        animation: fade 0.5s, fadeout 0.5s 3.6s;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .desktop {
+        display: none;
+    }
+
+    header {
+        justify-content: space-between;
+        padding: 0 1em;
+        position: relative;
+        z-index: 3;
+
+        .hamburger-icon {
+            display: block;
+        }
+
+        ul {
+            display: none;
+        }
+    }
+
+    .section-container {
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@keyframes fade {
+    from { opacity: 0.0; }
+    to   { opacity: 1.0; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1.0; }
+    to   { opacity: 0.0; }
 }
