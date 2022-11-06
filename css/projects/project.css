@@ -141,7 +141,6 @@ h1 {
   height: 100px;
   color: var(--main-txt);
   font-size: 5em;
-  text-shadow: 5px 5px 10px rgba(255, 255, 255, 0.5);
   text-align: center;
   text-decoration: underline;
   -webkit-text-decoration-color: var(--main-accent);
@@ -159,6 +158,7 @@ h1 {
 .description {
   width: 50vw;
   height: calc(100vh - 200px);
+  min-width: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -171,7 +171,7 @@ h1 {
   font-size: 1.5em;
   text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
   padding: 1em;
-  border: 2px solid var(--em-txt);
+  border: 3px solid var(--em-txt);
   border-radius: 1em;
 }
 .description dl dt {
@@ -180,6 +180,14 @@ h1 {
 .description dl dd {
   max-width: 25vw;
   text-align: center;
+}
+.description dl dd a {
+  color: var(--main-accent);
+}
+.description dl dd a:hover {
+  text-decoration: underline;
+  -webkit-text-decoration-color: var(--em-txt);
+          text-decoration-color: var(--em-txt);
 }
 .description dl ul {
   margin: 0;
