@@ -230,6 +230,7 @@ header .menu ul li {
   height: min(40vw, 0.9 * var(--fullscreen));
   width: min(40vw, 0.9 * var(--fullscreen));
   filter: drop-shadow(2px 2px 10px rgba(255, 255, 255, 0.5));
+  border-radius: 3em;
 }
 
 .section-container {
