@@ -10,6 +10,20 @@
     --fullscreen: calc(100vh - max(100px, 13vh));
 }
 
+.main::-webkit-scrollbar {
+    width: 0.75em;
+}
+   
+.main::-webkit-scrollbar-track {
+    background: linear-gradient(var(--header-bg), white);
+}
+
+.main::-webkit-scrollbar-thumb {
+    background-color: var(--main-accent);
+    outline: 2px solid var(--main-bg);
+    border-radius: 5px;
+}
+
 body {
     height: 100%;
     margin: 0;
@@ -30,7 +44,7 @@ a:hover {
 h1 {
     margin: 0;
     color: var(--main-accent);
-    font-size: clamp(6em, 10vh, 10em);
+    font-size: clamp(3em, 15vh, 10em);
     text-shadow: 5px 5px 10px rgb(255, 255, 255, 0.5);
 }
 
@@ -75,6 +89,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
 
     a {
         color: var(--main-accent);
